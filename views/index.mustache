@@ -20,32 +20,31 @@
 
                 <div class="row">
                   <div class="col-md-3">
-                    <strong>491</strong><span>Posts</span>
+                    <strong>{{user.edge_owner_to_timeline_media.count}}</strong><span> Posts</span>
                   </div>
 
                   <div class="col-md-3">
-                    <strong>1025</strong><span>Followers</span>
+                    <strong>{{user.edge_followed_by.count}}</strong><span> Followers</span>
                   </div>
 
                   <div class="col-md-3">
-                    <strong>769</strong><span>Following</span>
+                    <strong>{{user.edge_follow.count}}</strong><span> Following</span>
                   </div>
 
                 </div>
                 <div class="row">
-                  <p style="margin-top:24px">
-                    The 14th Street Y is a dynamic community center in the East Village. Membership includes fitness classes 💪 a pool 🏊 basketball court 🏀 & more! 🎭🎨
+                  <p style="margin-top:24px">{{user.biography}}
                   </p>
                 </div>
 
 
-                {{#user.edge_owner_to_timeline_media.edges.nodes}}
+                {{#user.edge_owner_to_timeline_media.node}}
                   <div class="col-md-4">
                     <div style="padding:12px">
                       <img style="width:100%" src="{{thumbnail_src}}" />
                     </div>
                   </div>
-                {{/user.edge_owner_to_timeline_media.edges.nodes}}
+                {{/user.edge_owner_to_timeline_media.node}}
         </div>
 
       </div>
