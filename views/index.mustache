@@ -38,13 +38,13 @@
                 </div>
 
 
-                {{#user.edge_owner_to_timeline_media.node}}
+                {{#user.edge_owner_to_timeline_media.edges}}
                   <div class="col-md-4">
                     <div style="padding:12px">
-                      <img style="width:100%" src="{{thumbnail_src}}" />
+                      <img style="width:100%" src="{{node.thumbnail_src}}" />
                     </div>
                   </div>
-                {{/user.edge_owner_to_timeline_media.node}}
+                {{/user.edge_owner_to_timeline_media.edges}}
         </div>
 
       </div>
